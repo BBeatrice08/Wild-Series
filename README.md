@@ -1,2 +1,0 @@
-# Wild-Series
-Quetes symfony
