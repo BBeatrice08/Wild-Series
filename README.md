@@ -1,4 +1,4 @@
 # Wild-Series
 Quetes symfony
 
-Le contenu de la quête 3 Symfony se trouve dans la branche 'dev'.
+Le contenu des quêtes Symfony se trouvent dans la branche 'dev'.
