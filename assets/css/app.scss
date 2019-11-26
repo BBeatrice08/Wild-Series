@@ -1,7 +1,18 @@
 body {
-    background-color: grey;
+    background-color: #f9ffd9;
 }
 
 h1 {
-    color: antiquewhite;
+    color: navy;
+}
+
+.navbar {
+    background-color: #1f3d6e;
+    display: flex;
+    flex-direction: row;
+    color: #cfd4b4;
+}
+
+.navbar a {
+    color: #cfd4b4;
 }

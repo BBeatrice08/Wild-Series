@@ -3,11 +3,12 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+//use Doctrine\Bundle\DoctrineBundle\Repository\ProgramRepository;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProgramRepository")
  */
-class Program
+class Program //extends ProgramRepository
 {
     /**
      * @ORM\Id()
