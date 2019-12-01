@@ -3,6 +3,7 @@
 {% block title %}All programs{% endblock %}
 
 {% block body %}
+        {% include './navbar.html.twig' %}
         <h1>Toutes les séries de la table program : </h1>
         {% for program in programs %}
                 <div>
@@ -15,7 +16,7 @@
         <a href="{{ path('app_index') }}">
                 Retour à l'accueil
         </a>
-        <a href="{{ path('wild_show', { 'slug': "walking-dead" }) }}">
+        <!--<a href="{{ path('wild_show', { 'slug': "walking-dead" }) }}">
                 Testing show() method from WildController with a real program s slug.
         </a>
         <br>
@@ -23,8 +24,8 @@
                 Testing index() method from WildController to view all programs.
         </a>
 
-        <a href="{{ path('wild_showByCategory', { 'name': "Horreur" }) }}">
+        <a href="{{ path('wild_category', { 'name': "Horreur" }) }}">
                 Testing showByCategory() method from WildController with a real category.
-        </a>
+        </a>-->
 
 {% endblock %}

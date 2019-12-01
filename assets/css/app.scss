@@ -1,3 +1,5 @@
+
+
 body {
     background-color: #f9ffd9;
 }
@@ -6,13 +8,16 @@ h1 {
     color: navy;
 }
 
+
+
 .navbar {
     background-color: #1f3d6e;
-    display: flex;
-    flex-direction: row;
     color: #cfd4b4;
+    height: 30px;
+    justify-content: space-evenly;
 }
 
 .navbar a {
-    color: #cfd4b4;
+    color: #f9ffd9;
 }
+

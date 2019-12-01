@@ -1,0 +1,16 @@
+<div class="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light md">
+        <!--<a class="navbar-brand" href="#">Navbar</a>-->
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="navbar-brand" href="{{ path('wild_index') }}">Accueil</a>
+                <a class="nav-item nav-link active" href="#">Menu <span class="sr-only"></span></a>
+                <a class="nav-item nav-link" href="{{ path('wild_showByProgram', { 'slug': 'walking-dead'}) }}">Programs</a>
+                <a class="nav-item nav-link" href="#">Movies</a>
+                <a class="nav-item nav-link disabled" href="{{ path('wild_category', { 'name': "Horreur" }) }}">Category</a>
+            </div>
+        </div>
+    </nav>
+</div>
+

@@ -1,0 +1,21 @@
+{# template wild/episode.html.twig #}
+
+{% extends './base.html.twig' %}
+
+{% block body %}
+    {% include './navbar.html.twig' %}
+
+        <div class="media">
+            <div class="media-body">
+                <h1 class="mt-0">Titre de l'épisode : {{ episode.title }}</h1>
+                <p>Numéro de l'épisode : {{ episode.number }}</p>
+                <p>{{ episode.synopsis }}</p>
+            </div>
+        </div>
+
+    <a href="{{ path('wild_index') }}">
+        Retour à l'accueil
+    </a>
+
+
+{% endblock %}
