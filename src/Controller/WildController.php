@@ -116,7 +116,7 @@ Class WildController extends AbstractController
      * Getting a season with a formatted slug title
      *
      * @param string $slug The slugger
-     * @Route("/showByProgram/{slug<^[a-zA-Z0-9-]+$>}", defaults={"slug" = null}, name="showByProgram")
+     * @Route("/showByProgram/{slug<^[a-zA-Z0-9- ]+$>}", defaults={"slug" = null}, name="showByProgram")
      * @return Response
      */
     public function showByProgram(?string $slug):Response
@@ -187,6 +187,25 @@ Class WildController extends AbstractController
         ]);
     }
 
+    /**
+     *
+     *
+     * @Route("/episode/{id}", defaults={"id" = null}, name="episode")
+     *
+     */
+    public function showEpisode(Episode $episode):Response
+    {
+        $season = $episode->getSeason();
+        $program = $season->getProgram()->getTitle();
+
+        //dd($season, $program, $episode);
+
+        return $this->render('wild/episode.html.twig', [
+            'episode' => $episode,
+            'season' => $season,
+            'program' => $program
+        ]);
+    }
 
 
     /*
