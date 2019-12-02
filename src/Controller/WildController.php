@@ -11,6 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class WildController
@@ -30,14 +31,42 @@ Class WildController extends AbstractController
         $programs = $this->getDoctrine()
             ->getRepository(Program::class)
             ->findAll();
+/*
+        $form = $this->createForm(
+            ProgramSearchType::class,
+            null,
+            ['method' => Request::METHOD_GET]
+        );
 
+        /*
+        $category = new Category();
+        $formCat = $this->createForm(
+            CategoryType::class,
+            $category
+        );
+
+        $formCat->handleRequest($request);
+
+        if ($formCat->isSubmitted()) {
+            $data = $formCat->getData();
+            // $data contains $_POST data
+            // TODO : Insertion dans bdd
+            //créér un category controller, l'extends, lui faire une méthode add (issu de doctrine)
+            //et ajouter $data en bdd
+            $data = $formCat->addCategory();
+            dd($data);
+        }
+        */
         if (!$programs) {
             throw $this->createNotFoundException(
                 'No program found in program\'s table.'
             );
         }
+
         return $this->render('wild/index.html.twig', [
-            'programs' => $programs
+            'programs' => $programs,
+            //'form' => $form->createView(),
+
         ]);
     }
 
