@@ -5,10 +5,10 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="navbar-brand" href="{{ path('wild_index') }}">Accueil</a>
-                <a class="nav-item nav-link active" href="#">Menu <span class="sr-only"></span></a>
+                <a class="nav-item nav-link disabled" href="{{ path('wild_category', { 'name': "horreur" }) }}">Category</a>
                 <a class="nav-item nav-link" href="{{ path('wild_index') }}">Programs</a>
+                <a class="nav-item nav-link active" href="#">Menu <span class="sr-only"></span></a>
                 <a class="nav-item nav-link" href="#">Movies</a>
-                <a class="nav-item nav-link disabled" href="{{ path('wild_category', { 'name': "Horreur" }) }}">Category</a>
             </div>
         </div>
     </nav>
