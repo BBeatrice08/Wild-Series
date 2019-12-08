@@ -8,6 +8,10 @@ Quete 11 Symfony - "Form"
 
 https://www.loom.com/share/d93ef912bb424f48900099209d2e369d
 
+Quete 12 - CRUD
+
+https://www.loom.com/share/9f454108eb534a25a1eae0a5a7fca803
+
 Quête 13 - Relations ManyToMany
 
 https://www.loom.com/share/b576d12eefa246be821a3e5c0f9024cc
