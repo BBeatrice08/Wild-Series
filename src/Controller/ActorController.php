@@ -2,14 +2,15 @@
 
 namespace App\Controller;
 
-use App\Entity\Actor;
 use App\Entity\Program;
+use App\Entity\Actor;
 use App\Form\ActorType;
 use App\Repository\ActorRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Form\FormTypeInterface;
 
 /**
  * @Route("/actor")
@@ -52,11 +53,10 @@ class ActorController extends AbstractController
     /**
      * @Route("/{id}", name="actor_show", methods={"GET"})
      */
-    public function show(Actor $actor, Program $program): Response
+    public function show(Actor $actor): Response
     {
         return $this->render('actor/show.html.twig', [
             'actor' => $actor,
-            'program' => $program
         ]);
     }
 
