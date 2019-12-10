@@ -69,10 +69,12 @@ class ProgramFixtures extends Fixture
             $program = new Program();
             $program->setTitle($title);
             $program->setSummary($data['summary']);
-            $program->setPoster('poster');
+            $program->setPoster($data['poster']);
+            $program->setCategory($this->getReference($data['category']));
 
             $manager->persist($program);
-            $this->addReference('program ' . $i, $program);
+            $this->addReference('program_' . $i, $program);
+
             $i++;
         }
         $manager->flush();
