@@ -12,9 +12,12 @@
 
     {% for episode in episode %}
 
-        <p>Episode {{ episode.number }} : {{ episode.title }}</p>
+        <p>Episode {{ episode.number }} :<a href="{{ path('wild_episode', { 'id': episode.id }) }}">{{ episode.title }}</a></p>
 
     {% endfor %}
+
+    <a href="{{ path('wild_showByProgram', { 'slug': program }) }}">
+        Lien vers le program </a>
 
 
 {% endblock %}

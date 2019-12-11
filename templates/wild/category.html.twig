@@ -3,6 +3,7 @@
 {% block title %}{{ categoryName.name }}{% endblock %}
 
 {% block body %}
+    {% include 'navbar.html.twig' %}
 
     {% for program in listProgram %}
 
