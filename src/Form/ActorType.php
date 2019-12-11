@@ -6,6 +6,7 @@ use App\Entity\Actor;
 use App\Entity\Program;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
+
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ActorType extends AbstractType
@@ -14,7 +15,7 @@ class ActorType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('program', Program::class, ['choice_label' => 'title'])
+            //->add('program', ProgramType::class, ['label' => 'title'])
         ;
     }
 

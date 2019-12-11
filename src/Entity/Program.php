@@ -48,7 +48,7 @@ class Program
      * @ORM\ManyToMany(targetEntity="App\Entity\Actor", mappedBy="programs")
      */
     private $actors;
-
+    //add an ORM join under ManyToMany ?
     public function __construct()
     {
         $this->season = new ArrayCollection();
@@ -163,7 +163,7 @@ class Program
             $this->actors->removeElement($actor);
             $actor->removeProgram($this);
         }
-
+        //move return above after contains and lcose if
         return $this;
     }
 }
