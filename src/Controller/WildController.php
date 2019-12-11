@@ -165,18 +165,19 @@ Class WildController extends AbstractController
 
         $programId = $programName->getId();
 
-        if ($programId) {
-            $listSeason = $this->getDoctrine()
-                ->getRepository(Season::class)
-                //->findAll();
-                ->findBy(
-                    ['program' => $programId],
-                    ['id' => 'desc'],
-                    6,
-                    0
-                );
-        }
 
+        $listSeason = $this->getDoctrine()
+            ->getRepository(Season::class)
+            //->findAll();
+            ->findBy(
+                ['program' => $programId],
+                ['id' => 'desc'],
+                6,
+                0
+            );
+
+
+        //dd($slug, $programName);
 
         if (!$programName) {
             throw $this->createNotFoundException(

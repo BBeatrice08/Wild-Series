@@ -12,7 +12,7 @@
                 <p>Numéro de l'épisode : {{ episode.number }}</p>
                 <p>{{ episode.synopsis }}</p>
 
-                <a href="{{ path('wild_showByProgram', { 'slug': program }) }}">
+                <a href="{{ path('wild_showByProgram', { 'slug': program | lower | replace({ " " : "-" }) }) }}">
                     Lien vers le program </a>
 
                 <a href="{{ path('wild_showBySeason', { 'id': season.id }) }}">
