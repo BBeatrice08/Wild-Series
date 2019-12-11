@@ -29,7 +29,7 @@ class Program
     private $summary;
 
     /**
-     * @ORM\Column(type="string", length=150)
+     * @ORM\Column(type="text")
      */
     private $poster;
 
