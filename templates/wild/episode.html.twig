@@ -7,15 +7,24 @@
 
         <div class="media">
             <div class="media-body">
-                <h1>{{ program }}</h1>
+                <h1>{{ episode.season.program.title }}</h1>
                 <h2>Titre de l'épisode : {{ episode.title }}</h2>
                 <p>Numéro de l'épisode : {{ episode.number }}</p>
                 <p>{{ episode.synopsis }}</p>
 
-                <a href="{{ path('wild_showByProgram', { 'slug': program | lower | replace({ " " : "-" }) }) }}">
+
+                {% if app.user %}
+                    {{  include('comment/_form.html.twig') }}
+                {% endif %}
+
+                {% for comment in episode.comments %}
+                    <p>{{ comment.comment }}</p>
+                {% endfor %}
+
+                <a href="{{ path('wild_showByProgram', { 'slug': episode.season.program.title | lower | replace({ " " : "-" }) }) }}">
                     Lien vers le program </a>
 
-                <a href="{{ path('wild_showBySeason', { 'id': season.id }) }}">
+                <a href="{{ path('wild_showBySeason', { 'id': episode.season.id }) }}">
                     Lien vers la saison </a>
             </div>
         </div>
